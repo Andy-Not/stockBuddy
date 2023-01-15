@@ -1,0 +1,19 @@
+version: '0.1'
+services:
+  growtagsdb:
+    image: mysql:latest
+    restart: "always"
+    container_name: "StockBuddy_MYSQL_DB"
+    ports:
+      - 3307:3307
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+    environment:
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: stockbuddy
+#    volumes:
+#      - ../database/init/ddl:/docker-entrypoint-initdb.d
