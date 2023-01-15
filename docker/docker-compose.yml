@@ -1,4 +1,4 @@
-version: '0.1'
+npversion: '0.1'
 services:
   growtagsdb:
     image: mysql:latest
